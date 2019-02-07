@@ -1,0 +1,110 @@
+# this is for quotes with print statement and without next page code
+
+(base) C:\Users\Joshl\Desktop\Udemy\scrapy_udemy_course\Part_4\quotes_spider>scrapy crawl quotes
+2019-02-07 17:02:20 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: quotes_spider)
+2019-02-07 17:02:20 [scrapy.utils.log] INFO: Versions: lxml 4.2.3.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.7.0, Python 3.6.6 |Anaconda custom (64-bit)| (default, Jun 28 2018, 11:27:44) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.4.2, Platform Windows-10-10.0.17134-SP0
+2019-02-07 17:02:20 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'quotes_spider', 'NEWSPIDER_MODULE': 'quotes_spider.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['quotes_spider.spiders']}
+2019-02-07 17:02:20 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-02-07 17:02:20 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-02-07 17:02:20 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-02-07 17:02:20 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-02-07 17:02:20 [scrapy.core.engine] INFO: Spider opened
+2019-02-07 17:02:20 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-02-07 17:02:20 [py.warnings] WARNING: C:\Users\Joshl\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py:59: URLWarning: allowed_domains accepts only domains, not URLs. Ignoring URL entry http://quotes.toscrape.com/ in allowed_domains.
+  warnings.warn("allowed_domains accepts only domains, not URLs. Ignoring URL entry %s in allowed_domains." % domain, URLWarning)
+
+2019-02-07 17:02:20 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6024
+2019-02-07 17:02:21 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://quotes.toscrape.com/robots.txt> (referer: None)
+2019-02-07 17:02:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com//> (referer: None)
+/n
+“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”
+Albert Einstein
+change,deep-thoughts,thinking,world
+/n
+/n
+“It is our choices, Harry, that show what we truly are, far more than our abilities.”
+J.K. Rowling
+abilities,choices
+/n
+/n
+“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”
+Albert Einstein
+inspirational,life,live,miracle,miracles
+/n
+/n
+“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”
+Jane Austen
+aliteracy,books,classic,humor
+/n
+/n
+“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”
+Marilyn Monroe
+be-yourself,inspirational
+/n
+/n
+“Try not to become a man of success. Rather become a man of value.”
+Albert Einstein
+adulthood,success,value
+/n
+/n
+“It is better to be hated for what you are than to be loved for what you are not.”
+André Gide
+life,love
+/n
+/n
+“I have not failed. I've just found 10,000 ways that won't work.”
+Thomas A. Edison
+edison,failure,inspirational,paraphrased
+/n
+/n
+“A woman is like a tea bag; you never know how strong it is until it's in hot water.”
+Eleanor Roosevelt
+misattributed-eleanor-roosevelt
+/n
+/n
+“A day without sunshine is like, you know, night.”
+Steve Martin
+humor,obvious,simile
+/n
+2019-02-07 17:02:21 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-02-07 17:02:21 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 447,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 2701,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 2, 7, 9, 2, 21, 669593),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2019, 2, 7, 9, 2, 20, 815717)}
+2019-02-07 17:02:21 [scrapy.core.engine] INFO: Spider closed (finished)
