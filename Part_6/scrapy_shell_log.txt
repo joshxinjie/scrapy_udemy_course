@@ -1,0 +1,56 @@
+(base) C:\Users\Joshl\OneDrive\Documents>scrapy shell
+2019-02-09 13:52:45 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapybot)
+2019-02-09 13:52:45 [scrapy.utils.log] INFO: Versions: lxml 4.2.3.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.7.0, Python 3.6.6 |Anaconda custom (64-bit)| (default, Jun 28 2018, 11:27:44) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.4.2, Platform Windows-10-10.0.17134-SP0
+2019-02-09 13:52:45 [scrapy.crawler] INFO: Overridden settings: {'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'LOGSTATS_INTERVAL': 0}
+2019-02-09 13:52:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2019-02-09 13:52:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-02-09 13:52:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-02-09 13:52:45 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-02-09 13:52:45 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+[s] Available Scrapy objects:
+[s]   scrapy     scrapy module (contains scrapy.Request, scrapy.Selector, etc)
+[s]   crawler    <scrapy.crawler.Crawler object at 0x00000202BE42AC18>
+[s]   item       {}
+[s]   settings   <scrapy.settings.Settings object at 0x00000202C2889940>
+[s] Useful shortcuts:
+[s]   fetch(url[, redirect=True]) Fetch URL and update local objects (by default, redirects are followed)
+[s]   fetch(req)                  Fetch a scrapy.Request and update local objects
+[s]   shelp()           Shell help (print this help)
+[s]   view(response)    View response in a browser
+In [1]: fetch('http://quotes.toscrape.com/login')
+2019-02-09 13:52:54 [scrapy.core.engine] INFO: Spider opened
+2019-02-09 13:52:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/login> (referer: None)
+
+In [2]: response.xpath('//*[@name="csrf_token"]')
+Out[2]: [<Selector xpath='//*[@name="csrf_token"]' data='<input type="hidden" name="csrf_token" v'>]
+
+In [3]: response.xpath('//*[@name="csrf_token"]').extract()
+Out[3]: ['<input type="hidden" name="csrf_token" value="cQvjGPsIyUiWgFbaDkdXRSKAuOohfEwpLmBeNxMYqrHlVtnJzZCT">']
+
+In [4]: response.xpath('//*[@name="csrf_token"]/text()').extract()
+Out[4]: []
+
+In [5]: response.xpath('//*[@name="csrf_token"]/@value').extract()
+Out[5]: ['cQvjGPsIyUiWgFbaDkdXRSKAuOohfEwpLmBeNxMYqrHlVtnJzZCT']
+
+In [6]: response.xpath('//*[@name="csrf_token"]/@value').extract_first()
+Out[6]: 'cQvjGPsIyUiWgFbaDkdXRSKAuOohfEwpLmBeNxMYqrHlVtnJzZCT'
