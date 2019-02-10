@@ -1,0 +1,206 @@
+(base) C:\Users\Joshl\Desktop\Udemy\scrapy_udemy_course\Part_8>scrapy startproject books_crawler
+New Scrapy project 'books_crawler', using template directory 'C:\\Users\\Joshl\\Anaconda3\\lib\\site-packages\\scrapy\\templates\\project', created in:
+    C:\Users\Joshl\Desktop\Udemy\scrapy_udemy_course\Part_8\books_crawler
+
+You can start your first spider with:
+    cd books_crawler
+    scrapy genspider example example.com
+
+(base) C:\Users\Joshl\Desktop\Udemy\scrapy_udemy_course\Part_8>cd books_crawler
+
+(base) C:\Users\Joshl\Desktop\Udemy\scrapy_udemy_course\Part_8\books_crawler>scrapy genspider books books.toscrape.com
+Created spider 'books' using template 'basic' in module:
+  books_crawler.spiders.books
+
+########################################################################################
+# with follow=False to scrape only the home page
+########################################################################################
+
+(base) C:\Users\Joshl\Desktop\Udemy\scrapy_udemy_course\Part_8\books_crawler>scrapy crawl books
+2019-02-09 20:53:23 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: books_crawler)
+2019-02-09 20:53:23 [scrapy.utils.log] INFO: Versions: lxml 4.2.3.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.7.0, Python 3.6.6 |Anaconda custom (64-bit)| (default, Jun 28 2018, 11:27:44) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.4.2, Platform Windows-10-10.0.17134-SP0
+2019-02-09 20:53:23 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'books_crawler', 'NEWSPIDER_MODULE': 'books_crawler.spiders', 'SPIDER_MODULES': ['books_crawler.spiders']}
+2019-02-09 20:53:23 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-02-09 20:53:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-02-09 20:53:23 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-02-09 20:53:23 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-02-09 20:53:23 [scrapy.core.engine] INFO: Spider opened
+2019-02-09 20:53:23 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-02-09 20:53:23 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6024
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/> (referer: None)
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/soumission_998/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/the-black-maria_991/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/the-requiem-red_995/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/sharp-objects_997/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/crime_51/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/erotica_50/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/cultural_49/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/politics_48/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/health_47/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/page-2.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/olio_984/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/set-me-free_988/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/novels_46/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/short-stories_45/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/christian_43/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/suspense_44/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/historical_42/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/self-help_41/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/academic_40/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/spirituality_39/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/contemporary_38/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/thriller_37/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/biography_36/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/business_35/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/history_32/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/horror_31/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/humor_30/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/parenting_28/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/autobiography_27/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/psychology_26/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/art_25/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/paranormal_24/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/poetry_23/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/science_22/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/young-adult_21/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/new-adult_20/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/fantasy_19/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/default_15/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/music_14/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/religion_12/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/childrens_11/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/fiction_10/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/romance_8/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/philosophy_7/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/classics_6/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/mystery_3/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/travel_2/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books_1/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 20:53:26 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-02-09 20:53:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 22427,
+ 'downloader/request_count': 74,
+ 'downloader/request_method_count/GET': 74,
+ 'downloader/response_bytes': 344286,
+ 'downloader/response_count': 74,
+ 'downloader/response_status_count/200': 74,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 2, 9, 12, 53, 26, 667459),
+ 'log_count/DEBUG': 75,
+ 'log_count/INFO': 7,
+ 'request_depth_max': 1,
+ 'response_received_count': 74,
+ 'scheduler/dequeued': 74,
+ 'scheduler/dequeued/memory': 74,
+ 'scheduler/enqueued': 74,
+ 'scheduler/enqueued/memory': 74,
+ 'start_time': datetime.datetime(2019, 2, 9, 12, 53, 23, 991674)}
+2019-02-09 20:53:26 [scrapy.core.engine] INFO: Spider closed (finished)
+
+########################################################################################
+# with follow=True and allow='music' to process only pages with music in url
+########################################################################################
+
+(base) C:\Users\Joshl\Desktop\Udemy\scrapy_udemy_course\Part_8\books_crawler>scrapy crawl books
+2019-02-09 21:02:53 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: books_crawler)
+2019-02-09 21:02:53 [scrapy.utils.log] INFO: Versions: lxml 4.2.3.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.7.0, Python 3.6.6 |Anaconda custom (64-bit)| (default, Jun 28 2018, 11:27:44) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.4.2, Platform Windows-10-10.0.17134-SP0
+2019-02-09 21:02:53 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'books_crawler', 'NEWSPIDER_MODULE': 'books_crawler.spiders', 'SPIDER_MODULES': ['books_crawler.spiders']}
+2019-02-09 21:02:53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-02-09 21:02:54 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-02-09 21:02:54 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-02-09 21:02:54 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-02-09 21:02:54 [scrapy.core.engine] INFO: Spider opened
+2019-02-09 21:02:54 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-02-09 21:02:54 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6024
+2019-02-09 21:02:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/> (referer: None)
+2019-02-09 21:02:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/category/books/music_14/index.html> (referer: http://books.toscrape.com/)
+2019-02-09 21:02:54 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET http://books.toscrape.com/catalogue/category/books/music_14/index.html> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2019-02-09 21:02:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/this-is-your-brain-on-music-the-science-of-a-human-obsession_414/index.html> (referer: http://books.toscrape.com/catalogue/category/books/music_14/index.html)
+2019-02-09 21:02:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/love-is-a-mix-tape-music-1_711/index.html> (referer: http://books.toscrape.com/catalogue/category/books/music_14/index.html)
+2019-02-09 21:02:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://books.toscrape.com/catalogue/how-music-works_979/index.html> (referer: http://books.toscrape.com/catalogue/category/books/music_14/index.html)
+2019-02-09 21:02:55 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-02-09 21:02:55 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1585,
+ 'downloader/request_count': 5,
+ 'downloader/request_method_count/GET': 5,
+ 'downloader/response_bytes': 24414,
+ 'downloader/response_count': 5,
+ 'downloader/response_status_count/200': 5,
+ 'dupefilter/filtered': 7,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 2, 9, 13, 2, 55, 393908),
+ 'log_count/DEBUG': 7,
+ 'log_count/INFO': 7,
+ 'request_depth_max': 3,
+ 'response_received_count': 5,
+ 'scheduler/dequeued': 5,
+ 'scheduler/dequeued/memory': 5,
+ 'scheduler/enqueued': 5,
+ 'scheduler/enqueued/memory': 5,
+ 'start_time': datetime.datetime(2019, 2, 9, 13, 2, 54, 60681)}
+2019-02-09 21:02:55 [scrapy.core.engine] INFO: Spider closed (finished)
